@@ -12,7 +12,4 @@ test("Get to /api/v1/status should return 200", async () => {
   expect(responseBody.dependencies.database.version).toEqual('16.0');
   expect(responseBody.dependencies.database.max_connections).toEqual(100);
   expect(responseBody.dependencies.database.opened_connections).toEqual(1);
-
-  // const used_connections = await database.query("SELECT count(*) FROM pg_stat_activity WHERE datname = current_database();");
-  // expect(responseBody.used_connections).toEqual(used_connections);
 });
